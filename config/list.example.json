@@ -1,0 +1,39 @@
+{
+    "listLength": 3,
+    "people": [
+        {
+            "name": "john",
+            "spouse": "susan",
+            "email": ""
+        },
+        {
+            "name": "susan",
+            "spouse": "john",
+            "email": ""
+        },
+        {
+            "name": "jen",
+            "spouse": "ron",
+            "email": ""
+        },
+        {
+            "name": "ron",
+            "spouse": "jen",
+            "email": ""
+        },
+        {
+            "name": "bert",
+            "spouse": "carrie",
+            "email": ""
+        },
+        {
+            "name": "carrie",
+            "spouse": "bert",
+            "email": ""
+        },
+        {
+            "name": "walter",
+            "email": ""
+        }
+    ]
+}
