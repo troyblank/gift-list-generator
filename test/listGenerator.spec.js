@@ -2,9 +2,8 @@ const assert = require('assert');
 const fs = require('fs');
 const Chance = require('chance');
 const chance = new Chance();
-const listGenerator = require('../../src/listGenerator');
+const listGenerator = require('../src/listGenerator');
 const testList = JSON.parse(fs.readFileSync('./config/list.example.json', 'utf8'));
-
 
 describe('List Generator', () => {
     it('should be able able to make a pick list', () => {
@@ -36,24 +35,6 @@ describe('List Generator', () => {
         assert.equal(listGenerator.isPickDisqualified(person2, person), true);
         assert.equal(listGenerator.isPickDisqualified(chance.word(), person), false);
     });
-
-//     function getRandomPick(picks, person, maxtries = 100) {
-//     const randomIndex = Math.floor(Math.random() * picks.length);
-//     const pick = picks[randomIndex];
-//     let triesRemaining;
-
-//     if (isPickDisqualified(pick, person)) {
-//         triesRemaining = maxtries - 1;
-//         if (0 <= triesRemaining) {
-//             return getRandomPick(picks, person, triesRemaining);
-//         }
-
-//         return false;
-//     }
-
-//     picks.splice(randomIndex, 1);
-//     return pick;
-// }
 
     it('should be able able to get a random pick', () => {
         const pick1 = chance.word();

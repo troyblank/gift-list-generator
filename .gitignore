@@ -15,3 +15,5 @@ ehthumbs.db
 Thumbs.db
 
 coverage
+config/*.json
+!config/*.example.json

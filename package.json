@@ -5,6 +5,9 @@
     "start": "node run",
     "test": "grunt test"
   },
+  "dependencies": {
+    "nodemailer": "2.6.4"
+  },
   "devDependencies": {
     "@troyblank/eslint-config-troyblank": "0.4.0",
     "@troyblank/mocha-base-troyblank": "0.1.1",
