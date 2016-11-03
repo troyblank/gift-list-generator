@@ -1,6 +1,13 @@
 const fs = require('fs');
 const nodemailer = require('nodemailer');
-const emailCreds = JSON.parse(fs.readFileSync('./config/email.json', 'utf8'));
+let emailCreds;
+
+/* istanbul ignore if */
+if (fs.existsSync('./config/email.json')) {
+    emailCreds = JSON.parse(fs.readFileSync('./config/email.json', 'utf8'));
+} else {
+    emailCreds = JSON.parse(fs.readFileSync('./config/email.example.json', 'utf8'));
+}
 
 const transporter = nodemailer.createTransport(`smtps://${emailCreds.username}:${emailCreds.password}@smtp.gmail.com`);
 
